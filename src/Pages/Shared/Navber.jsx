@@ -19,6 +19,7 @@ const Navber = () => {
     
     <li><NavLink to={'/order'}>Order Now</NavLink></li>
     <li><NavLink to={'/contact'}>Contact Us</NavLink></li>
+    <li><NavLink to={'/report'}>Report</NavLink></li>
     
     
     </>
