@@ -5,7 +5,7 @@ import Menu from '../../Shared/Menu';
 
 const OfferMenu = () => {
     const [menu] = UseMenu()
-    const offermenu = menu.filter(items=>items.category ==='offered')
+    const offerMenu = menu.filter(items=>items.category ==='offered')
     return (
         <div>
             <section>
@@ -13,7 +13,7 @@ const OfferMenu = () => {
             </section>
             <section className='grid gird-cols-1 md:grid-cols-2 gap-8 mb-10  '>
                 {
-                    offermenu.map(item=><Menu item={item}></Menu>)
+                    offerMenu.map(item=><Menu item={item}></Menu>)
                 }
 
             </section>
