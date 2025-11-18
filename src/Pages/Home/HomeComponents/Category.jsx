@@ -1,4 +1,3 @@
-import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -50,8 +49,6 @@ const Category = () => {
             <h1 className='md:text-3xl font-bold -mt-10 text-center text-white uppercase'>desserts</h1>
         
         </SwiperSlide>
-        
-        
       </Swiper>
         </div>
     );

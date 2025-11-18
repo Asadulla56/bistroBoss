@@ -5,12 +5,12 @@ import Navber from '../Pages/Shared/Navber';
 
 const Root = () => {
     const location = useLocation()
-    const noNavber = location.pathname.includes('register') || location.pathname.includes('login')
+    const noNavbar = location.pathname.includes('register') || location.pathname.includes('login')
     return (
         <div>
-            {noNavber ||<Navber/>}
+            {noNavbar ||<Navber/>}
             <Outlet/>
-            { noNavber ||<Footer/>}
+            { noNavbar ||<Footer/>}
             
         </div>
     );
