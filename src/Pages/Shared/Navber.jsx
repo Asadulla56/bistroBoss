@@ -23,7 +23,7 @@ const Navber = () => {
     
     
     </>
-    const handlelogout = ()=>{
+    const handleLogout = ()=>{
       signoutUser()
     }
     return (
@@ -62,9 +62,9 @@ const Navber = () => {
       {links}
     </ul>
   </div>
-  <div className="navbar-end">
+  <div className="navbar-end gap-1">
     <Link to={'/register'} className="btn bg-[#D1A054] border-none">Register</Link>
-    <button onClick={handlelogout}>log out</button>
+    <button onClick={handleLogout}  className="btn bg-[#D1A054] border-none">log out</button>
   </div>
 </div>
             

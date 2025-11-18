@@ -1,31 +1,17 @@
-import React from 'react';
+import React from "react";
+import Hero from "../Home/HomeComponents/Hero";
 
 const Report = () => {
-    const reportData = [
+  const reportData = [
     { id: 1, name: "John Doe", sales: 5000, status: "Completed" },
     { id: 2, name: "Jane Smith", sales: 3000, status: "Pending" },
     { id: 3, name: "Mike Johnson", sales: 7000, status: "Completed" },
   ];
-    return (
-       <div>
-        <div
-  className="hero min-h-screen"
-  style={{
-    backgroundImage: "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
-  }}>
-  <div className="hero-overlay bg-opacity-60"></div>
-  <div className="hero-content text-neutral-content text-center">
-    <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.
-      </p>
-      <button className="btn btn-primary">Get Started</button>
-    </div>
-  </div>
-</div>
-        <div className="p-6 bg-gray-100 ">
+  return (
+    <div>
+      <Hero />
+
+      <div className="p-6 bg-gray-100 ">
         <h1 className="text-2xl font-bold mb-4">Sales Report</h1>
         <div className="overflow-x-auto">
           <table className="min-w-full bg-white shadow-md rounded-lg">
@@ -45,7 +31,9 @@ const Report = () => {
                   <td className="py-2 px-4">{item.sales}</td>
                   <td
                     className={`py-2 px-4 font-semibold ${
-                      item.status === "Completed" ? "text-green-600" : "text-red-600"
+                      item.status === "Completed"
+                        ? "text-green-600"
+                        : "text-red-600"
                     }`}
                   >
                     {item.status}
@@ -56,8 +44,8 @@ const Report = () => {
           </table>
         </div>
       </div>
-      </div>
-    )
-  };
+    </div>
+  );
+};
 
 export default Report;
