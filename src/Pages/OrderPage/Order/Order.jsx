@@ -6,19 +6,19 @@ import UseMenu from './../../../Hooks/UseMenu';
 import Card from '../../Shared/Card';
 
 const Order = () => {
-    const [tabindex,settabinsex] = useState(0)
-    const [page,setpage] = useState(1)
+    const [tabIndex,setTabIndex] = useState(0)
+    const [page,setPage] = useState(1)
     const [menu] = UseMenu()
     
    
-    const pizzamenu = menu.filter(items=>items.category==='pizza')
-    const saladmenu = menu.filter(items=>items.category==='salad')
-    const soupmenu = menu.filter(items=>items.category==='soup')
-    const drinksmenu = menu.filter(items=>items.category==='drinks')
-    const dessertmenu = menu.filter(items=>items.category==='dessert')
-    const saladpage = Math.ceil(saladmenu.length/4)
+    const pizzaMenu = menu.filter(items=>items.category==='pizza')
+    const saladMenu = menu.filter(items=>items.category==='salad')
+    const soupMenu = menu.filter(items=>items.category==='soup')
+    const drinksMenu = menu.filter(items=>items.category==='drinks')
+    const dessertMenu = menu.filter(items=>items.category==='dessert')
+    const saladPage = Math.ceil(saladMenu.length/4)
 
-    const paginatedSaladMenu = saladmenu.slice(
+    const paginatedSaladMenu = saladMenu.slice(
       (page - 1) * 4,
       page * 4
   );
@@ -26,13 +26,13 @@ const Order = () => {
         <div>
           <OrderBanner/>
           <section className=''>
-          <Tabs className={'w-10/12 mx-auto'} defaultIndex={tabindex} onSelect={(index) => settabinsex(index)}>
+          <Tabs className={'w-10/12 mx-auto'} defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
     <TabList className={'flex justify-center my-7'}>
       <Tab>Salad</Tab>
-      <Tab>pizza</Tab>
-      <Tab>soups</Tab>
-      <Tab>desserts</Tab>
-      <Tab>drinks</Tab>
+      <Tab>Pizza</Tab>
+      <Tab>Soups</Tab>
+      <Tab>Desserts</Tab>
+      <Tab>Drinks</Tab>
     </TabList>
 
     <TabPanel>
@@ -42,36 +42,36 @@ const Order = () => {
       }
       </section>
       <div className="join">
-  <button onClick={()=>setpage(page-1)}  disabled={page <= 1} className="join-item btn">«</button>
+  <button onClick={()=>setPage(page-1)}  disabled={page <= 1} className="join-item btn">«</button>
   <button className="join-item btn">{page}</button>
-  <button onClick={()=>setpage(page+1)} disabled={page >= saladpage} className="join-item btn">»</button>
+  <button onClick={()=>setPage(page+1)} disabled={page >= saladPage} className="join-item btn">»</button>
 </div>
     </TabPanel>
     <TabPanel>
     <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10'>
       {
-        pizzamenu.map(item=><Card item={item}></Card>)
+        pizzaMenu.map(item=><Card item={item}></Card>)
       }
       </section>
     </TabPanel>
     <TabPanel>
     <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10'>
       {
-       soupmenu.map(item=><Card item={item}></Card>)
+       soupMenu.map(item=><Card item={item}></Card>)
       }
       </section>
     </TabPanel>
     <TabPanel>
     <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10'>
       {
-        dessertmenu.map(item=><Card item={item}></Card>)
+        dessertMenu.map(item=><Card item={item}></Card>)
       }
       </section>
     </TabPanel>
     <TabPanel>
     <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10'>
       {
-        drinksmenu.map(item=><Card item={item}></Card>)
+        drinksMenu.map(item=><Card item={item}></Card>)
       }
       </section>
     </TabPanel>
