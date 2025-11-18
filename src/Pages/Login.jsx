@@ -4,7 +4,7 @@ import SocialLogin from './Shared/SocialLogin';
 import registerBg from '../assets/others/authentication.png';
 import loginImg from '../assets/others/authentication2.png';
 import { Link } from 'react-router-dom';
-import useAuth from '../Hooks/UseAuth';
+import useAuth from "../Hooks/useAuth";
 
 const Login = () => {
   const [disabled, setDisabled] = useState(true);
