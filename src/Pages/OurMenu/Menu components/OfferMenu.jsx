@@ -1,6 +1,6 @@
 import React from 'react';
 import ShareTitle from '../../Shared/ShareTitle';
-import UseMenu from '../../../Hooks/UseMenu';
+import UseMenu from '../../../Hooks/UseMenu.jsx';
 import Menu from '../../Shared/Menu';
 
 const OfferMenu = () => {
