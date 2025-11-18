@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import OrderBanner from '../OrderComponets/OrderBanner';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import UseMenu from './../../../Hooks/UseMenu';
+import {UseMenu }from '.../../hooks/UseMenu';
 import Card from '../../Shared/Card';
 
 const Order = () => {

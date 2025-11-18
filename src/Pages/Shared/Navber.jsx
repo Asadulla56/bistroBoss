@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
-import useAuth from '../../Hooks/UseAuth';
+import useAuth from '../../hooks/UseAuth';
 
 const Navber = () => {
   const {signoutUser,user} = useAuth()

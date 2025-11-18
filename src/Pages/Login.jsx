@@ -4,7 +4,7 @@ import registerBg from '../assets/others/authentication.png';
 import loginImg from '../assets/others/authentication2.png'
 import { Link } from 'react-router-dom';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
-import useAuth from '../Hooks/UseAuth';
+import useAuth from '../hooks/UseAuth';
 
 const Login = () => {
   const [disabled, setDisabled] = useState(true);
