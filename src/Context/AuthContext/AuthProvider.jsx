@@ -5,17 +5,17 @@ import { auth } from './../../Firebace/Firebace.init';
 const AuthProvider = ({children}) => {
   const [user,setuser]=useState()
   const provider = new GoogleAuthProvider();
-  const fbprovider = new FacebookAuthProvider();
-  const gitprovider = new GithubAuthProvider();
+  const fbProvider = new FacebookAuthProvider();
+  const githubProvider = new GithubAuthProvider();
 
-  const googlelogin = ()=>{
+  const googleLogin = ()=>{
     return signInWithPopup(auth,provider)
   }
-  const fblogin = ()=>{
-    return signInWithPopup(auth,fbprovider)
+  const fbLogin = ()=>{
+    return signInWithPopup(auth,fbProvider)
   }
-  const gitlogin = ()=>{
-    return signInWithPopup(auth,gitprovider)
+  const gitLogin = ()=>{
+    return signInWithPopup(auth,githubProvider)
   }
   const signupUser = ( email, password)=>{
     return createUserWithEmailAndPassword(auth, email, password)
@@ -26,7 +26,7 @@ const AuthProvider = ({children}) => {
   useEffect(()=>{
     const unsubscribe = onAuthStateChanged(auth,currentUser=>{
            
-      setuser(currentUser)
+      setUser(currentUser)
   })
   return ()=>{
       unsubscribe()
@@ -40,10 +40,10 @@ const AuthProvider = ({children}) => {
     })
     .catch(error=> console.log(error))
 }
-    const authinfo = {
-      googlelogin,
-      fblogin,
-      gitlogin,
+    const authInfo = {
+      googleLogin,
+      fbLogin,
+      gitLogin,
       signupUser,
       signinUser,
       signoutUser,
@@ -51,7 +51,7 @@ const AuthProvider = ({children}) => {
 
     }
     return (
-      <AuthContext.Provider value={authinfo}>
+      <AuthContext.Provider value={authInfo}>
         {children}
 
       </AuthContext.Provider>
