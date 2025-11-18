@@ -4,7 +4,7 @@ import  registerImg from '../assets/others/authentication1-removebg-preview.png'
 import { Link } from 'react-router-dom';
 import SocialLogin from './Shared/SocialLogin';
 import { useForm,  } from "react-hook-form"
-import useAuth from '../hooks/UseAuth';
+import useAuth from '../Hooks/UseAuth';
 const Register = () => {
   const {signupUser} = useAuth();
   const {

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { FaFacebook, FaGithub, FaGoogle } from 'react-icons/fa';
-import useAuth from '../../hooks/UseAuth';
+import useAuth from '../../Hooks/UseAuth';
 import { useNavigate } from 'react-router-dom';
 
 

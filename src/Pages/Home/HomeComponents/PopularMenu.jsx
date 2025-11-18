@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ShareTitle from '../../Shared/ShareTitle';
 import Menu from '../../Shared/Menu';
-import UseMenu from '.../../hooks/UseMenu';
+import UseMenu from '../../../Hooks/UseMenu.jsx';
 
 const PopularMenu = () => {
     const [menu] = UseMenu()

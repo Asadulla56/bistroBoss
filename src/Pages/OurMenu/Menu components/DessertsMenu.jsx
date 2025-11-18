@@ -1,5 +1,5 @@
 import React from 'react';
-import UseMenu from '.../../hooks/UseMenu';
+import UseMenu from '../../../Hooks/UseMenu';
 import Menu from '../../Shared/Menu';
 
 const DessertsMenu = () => {
