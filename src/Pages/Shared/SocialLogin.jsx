@@ -7,9 +7,9 @@ import { useNavigate } from 'react-router-dom';
  
 const SocialLogin = () => {
     const navigate = useNavigate()
-    const {googlelogin,fblogin,gitlogin} = useAuth();
-    const handlegoogle = ()=>{
-        googlelogin()
+    const {googleLogin,fbLogin,gitLogin} = useAuth();
+    const handleGoogle = ()=>{
+        googleLogin()
         .then(res=>{
             console.log(res.user)
             navigate('/')
@@ -18,8 +18,8 @@ const SocialLogin = () => {
             console.log(error)
         })
     }
-    const handlefacebook = ()=>{
-        fblogin()
+    const handleFacebook = ()=>{
+        fbLogin()
         .then(res=>{
             console.log(res.user)
         })
@@ -28,8 +28,8 @@ const SocialLogin = () => {
         })
 
     }
-    const handlegit = ()=>{
-        gitlogin()
+    const handleGit = ()=>{
+        gitLogin()
         .then(res=>{
             console.log(res.user)
         })
@@ -41,9 +41,9 @@ const SocialLogin = () => {
         <div>
             <h4 className='text-center font-medium text-[#444444]'>Or sign up with</h4>
             <div className='flex my-6 justify-center gap-4'>
-                <button onClick={handlefacebook} className='btn btn-outline btn-circle'><FaFacebook /></button>
-                <button onClick={handlegoogle} className='btn btn-outline btn-circle'><FaGoogle /></button>
-                <button onClick={handlegit} className='btn btn-outline btn-circle'><FaGithub /></button>
+                <button onClick={handleFacebook} className='btn btn-outline btn-circle'><FaFacebook /></button>
+                <button onClick={handleGoogle} className='btn btn-outline btn-circle'><FaGoogle /></button>
+                <button onClick={handleGit} className='btn btn-outline btn-circle'><FaGithub /></button>
             </div>
             
         </div>

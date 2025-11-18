@@ -1,6 +1,6 @@
 import React from 'react';
-import registerbg from '../assets/others/authentication.png';
-import  registerimg from '../assets/others/authentication1-removebg-preview.png'
+import registerBg from '../assets/others/authentication.png';
+import  registerImg from '../assets/others/authentication1-removebg-preview.png'
 import { Link } from 'react-router-dom';
 import SocialLogin from './Shared/SocialLogin';
 import { useForm,  } from "react-hook-form"
@@ -28,7 +28,7 @@ const Register = () => {
   })
   }
     return (
-        <div style={{backgroundImage:`url(${registerbg})`}} className='min-h-screen p-10'>
+        <div style={{backgroundImage:`url(${registerBg})`}} className='min-h-screen p-10'>
            <Link to={'/'}>Back to Home</Link>
             <div className='flex justify-around md:flex-row flex-col-reverse items-center '>
              <div className='w-full mb-10 lg:w-1/3'>
@@ -69,7 +69,7 @@ const Register = () => {
              </div>
 
               <div>
-                <img src={registerimg} alt="" />
+                <img src={registerImg} alt="" />
               </div>
             </div>
             

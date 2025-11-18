@@ -7,12 +7,12 @@ const Navber = () => {
   const {signoutUser,user} = useAuth()
   const navigate = useNavigate()
   const location = useLocation()
-  const routetitle = {
+  const routeTitle = {
     "/":'Bistro Boss | Home',
     "/menu":'Bistro Boss | Menu',
     "/order":'Bistro Boss | Order' 
   }
-  const title = routetitle[location.pathname] || 'Bistro Boss'
+  const title = routeTitle[location.pathname] || 'Bistro Boss'
     const links = <>
     <li><NavLink to={'/'}>Home</NavLink></li>
     <li><NavLink to={'/menu'}>Our Menu</NavLink></li>
