@@ -9,13 +9,13 @@ import '@smastrom/react-rating/style.css';
 import { FaQuoteLeft } from "react-icons/fa";
 
 const TESTIMONIALS = () => {
-  const [testimonial, settestimoial] = useState([]);
+  const [testimonial, setTestimonial] = useState([]);
   useEffect(() => {
     fetch("reviews.json")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        settestimoial(data);
+        setTestimonial(data);
       });
   }, []);
   return (
